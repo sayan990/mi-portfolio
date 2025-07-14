@@ -2,7 +2,7 @@
 function NavBar() {
   return (
     <>
-      <header className="bg-red-800 text-white py-4 px-6 flex justify-between items-center">
+      <header className="bg-blue-900 text-white py-4 px-6 flex justify-between items-center">
     <div className="text-lg font-semibold">Home</div>
     <nav>
       <ul className="flex space-x-6">

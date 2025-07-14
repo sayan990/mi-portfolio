@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className='bg-gradient-to-b from-blue-300 to-cyan-200'>
         <Home />
       </div>
     </>

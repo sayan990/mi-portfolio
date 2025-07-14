@@ -2,7 +2,7 @@ function Present() {
 
   return (
     <>
-     <div className="flex items-center p-8 bg-gray-200 min-h-screen">
+     <div className="flex items-center p-8 min-h-screen" id="about">
   <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden max-w-4xl mx-auto">
     <div className="md:w-1/3 p-4 flex justify-center items-center">
       <div className="border-2 border-yellow-100 rounded-lg overflow-hidden">
