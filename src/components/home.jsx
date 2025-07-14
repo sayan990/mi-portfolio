@@ -1,12 +1,13 @@
 import NavBar from "./navBar"
 import Present from "./present"
+import Footer from "./footer"
 
 function Home() {
   return (
     <>
     <div className="min-h-screen bg-gray-300 flex flex-col">
-     <NavBar />
-     <main className="flex-grow flex items-center justify-center py-12 px-6">
+      <NavBar />
+      <main className="flex-grow flex items-center justify-center py-12 px-6">
     <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
       <div className="flex-1 max-w-lg">
         <p className="text-lg mb-2">¡hola!</p>
@@ -32,11 +33,10 @@ function Home() {
         />
       </div>
     </div>
-  </main>
-        <Present />
-        <div className="bg-gray-200 py-6 text-center">
-        <p className="text-gray-600">© 2023 Maxi Caceres. Todos los derechos reservados.</p>
-        </div>
+      </main>
+      <Present />
+      <Footer />
+       
   </div>
     </>
   )
