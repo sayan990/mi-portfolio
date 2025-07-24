@@ -2,52 +2,52 @@ import NavBar from "./navBar"
 import Present from "./present"
 import Footer from "./footer"
 import Experience from "./experience"
+import { Button } from "./ui/button"
+import { Code} from "lucide-react"
+
 
 function Home() {
-  // Handler para scroll suave
-  const handleScroll = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <>
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       <NavBar />
       <main className="flex-grow flex items-center justify-center py-12 px-6">
-    <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
-      <div className="flex-1 max-w-lg">
-        <p className="text-lg mb-2">¡hola!</p>
-        <h1 className="text-4xl font-bold mb-2">Maximiliano</h1>
-        <h2 className="text-xl mb-6">Desarrollador Web</h2>
-        <p className="text-gray-700 mb-8">
-          Soy un apasionado autónomo especializado en desarrollo web, diseño UI/UX y SEO. Colaboremos y demos vida a tu visión digital.
-        </p>
-        <div className="flex space-x-4">
-          <button
-            className="bg-pink-500 text-white py-2 px-6 rounded shadow hover:bg-pink-600 transition duration-300"
-            onClick={() => handleScroll('about')}
-          >
-            Sobre Mí
-          </button>
-          <button
-            className="bg-gray-200 text-gray-800 py-2 px-6 rounded shadow hover:bg-gray-300 transition duration-300"
-            onClick={() => handleScroll('work')}
-          >
-            Mi Trabajo
-          </button>
+    {/* Hero Section */}
+    <section id="inicio" className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center py-20">
+            <div className="mb-8">
+              <div className="w-32 h-32 mx-auto bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-6">
+                <Code className="w-16 h-16 text-white" />
+              </div>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6">
+              Hola, soy{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
+                Maxi Desarrollador
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto">
+              Desarrollador Frontend Junior especializado en crear experiencias web modernas y responsivas
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
+              >
+                Ver mis proyectos
+              </Button>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
+              >
+                Descargar CV
+              </Button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="flex-1 max-w-md">
-        <img
-          src="/img_home.png"
-          alt="Person coding on a laptop"
-          className="rounded-lg shadow-lg w-full h-auto object-cover"
-        />
-      </div>
-    </div>
+      </section>
       </main>
       <Present />
       <Experience />

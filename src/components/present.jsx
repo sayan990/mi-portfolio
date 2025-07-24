@@ -1,39 +1,53 @@
+import { Github, Linkedin,} from "lucide-react"
+import { Button } from "./ui/button"
+
 function Present() {
 
   return (
     <>
-     <div className="flex items-center p-8 min-h-screen" id="about">
-  <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden max-w-4xl mx-auto">
-    <div className="md:w-1/3 p-4 flex justify-center items-center">
-      <div className="border-2 border-yellow-100 rounded-lg overflow-hidden">
-        <img
-          src="https://picsum.photos/300/400"
-          alt="Profile"
-          className="object-cover w-full h-full"
-        />
-      </div>
-    </div>
-    <div className="md:w-2/3 p-6 flex flex-col justify-center">
-      <h1 className="text-3xl font-bold text-gray-800 mb-1">Maximiliano</h1>
-      <p className="text-pink-500 text-lg mb-2">
-        Freelance web Developer | Javascript | ReactJS | NodeJS
-      </p>
-      <p className="text-gray-700 mb-4">
-        Soy un apasionado autónomo dedicado a crear soluciones innovadoras. Con experiencia en diseño y desarrollo, transformo ideas en realidad. Colaboremos y demos vida a tu visión, creando juntos experiencias impactantes.
-      </p>
-      <table className="text-gray-700 text-sm w-auto">
-        <tbody>
-          <tr><td className="font-semibold pr-4">Nacimiento</td><td>2003/01/16</td></tr>
-          <tr><td className="font-semibold pr-4">Edad</td><td>22</td></tr>
-          <tr><td className="font-semibold pr-4">País</td><td>Argentina</td></tr>
-          <tr><td className="font-semibold pr-4">E-mail</td><td>maximilianocaceres1601@gmail.com</td></tr>
-          <tr><td className="font-semibold pr-4">Phone</td><td>+54 261-6182372</td></tr>
-          <tr><td className="font-semibold pr-4">Freelance</td><td>Yes</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
+      {/* About Section */}
+      <section id="sobre-mi" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Sobre mí</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <img
+                src="/placeholder.svg?height=400&width=400"
+                alt="Foto de perfil"
+                className="w-full max-w-md mx-auto rounded-2xl shadow-2xl"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold text-slate-800 mb-4">
+                Desarrollador Frontend apasionado por la tecnología
+              </h3>
+              <p className="text-slate-600 mb-6 leading-relaxed">
+                Soy un desarrollador junior con sólidos conocimientos en tecnologías frontend modernas. Me especializo
+                en crear interfaces de usuario intuitivas y responsivas utilizando HTML5, JavaScript, React y Tailwind
+                CSS.
+              </p>
+              <p className="text-slate-600 mb-6 leading-relaxed">
+                Mi objetivo es seguir creciendo profesionalmente mientras contribuyo a proyectos innovadores que generen
+                un impacto positivo. Me encanta aprender nuevas tecnologías y enfrentar desafíos que me permitan mejorar
+                mis habilidades.
+              </p>
+              <div className="flex space-x-4">
+                <Button variant="outline" size="sm">
+                  <Github className="w-4 h-4 mr-2" />
+                  GitHub
+                </Button>
+                <Button variant="outline" size="sm">
+                  <Linkedin className="w-4 h-4 mr-2" />
+                  LinkedIn
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }

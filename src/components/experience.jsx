@@ -1,44 +1,76 @@
-import Card from './card';
+import {Card, CardHeader, CardTitle, CardContent} from './ui/card';
+import { Palette, Globe, Code } from "lucide-react"
 
 function Experience() {
+
+  const skills = [
+    { name: "HTML5", level: 85, icon: Globe },
+    { name: "JavaScript", level: 80, icon: Code },
+    { name: "React", level: 75, icon: Code },
+    { name: "Tailwind CSS", level: 90, icon: Palette },
+  ]
+
+  const projects = [
+    {
+      title: "E-commerce Landing Page",
+      description: "Página de aterrizaje responsive para tienda online con carrito de compras básico.",
+      tech: ["HTML", "JavaScript", "Tailwind CSS"],
+      image: "/placeholder.svg?height=200&width=300",
+      github: "#",
+      demo: "#",
+    },
+    {
+      title: "Todo App React",
+      description: "Aplicación de tareas con funcionalidades CRUD y almacenamiento local.",
+      tech: ["React", "JavaScript", "Tailwind CSS"],
+      image: "/placeholder.svg?height=200&width=300",
+      github: "#",
+      demo: "#",
+    },
+    {
+      title: "Portfolio Personal",
+      description: "Sitio web personal responsive con diseño moderno y animaciones.",
+      tech: ["React", "Tailwind CSS", "JavaScript"],
+      image: "/placeholder.svg?height=200&width=300",
+      github: "#",
+      demo: "#",
+    },
+  ]
+
     return (
       <>
-       <div className=" min-h-screen flex flex-col items-center py-10">
-      <h2 className="text-4xl font-semibold text-gray-800 mb-10 self-start ml-20">Experiencia</h2>
-      <div className="flex items-center justify-center gap-8">
-        <button className="w-12 h-12 flex items-center justify-center border border-gray-500 rounded-lg text-gray-800 hover:bg-gray-300 transition-colors">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-          </svg>
-        </button>
-
-        <div className="flex gap-6">
-          <Card imageUrl="/img_home.png" title="Project 1" description="Description 1" skills={["HTML", "CSS", "JavaScript", "react", "nodejs"]} githubUrl="https://github.com" websiteUrl="https://example.com" />
-          <Card imageUrl="/img_home.png" title="Project 2" description="Description 2" skills={["HTML", "CSS", "JavaScript", "react", "nodejs"]} githubUrl="https://github.com" websiteUrl="https://example.com" />
-          <Card imageUrl="/img_home.png" title="Project 3" description="Description 3" skills={["HTML", "CSS", "JavaScript", "react", "nodejs"]} githubUrl="https://github.com" websiteUrl="https://example.com" />
+       <section id="habilidades" className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Habilidades Técnicas</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {skills.map((skill, index) => {
+              const Icon = skill.icon
+              return (
+                <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="w-16 h-16 mx-auto bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-4">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <CardTitle className="text-xl">{skill.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="w-full bg-slate-200 rounded-full h-2 mb-2">
+                      <div
+                        className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-1000"
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
+                    </div>
+                    <p className="text-sm text-slate-600">{skill.level}% de dominio</p>
+                  </CardContent>
+                </Card>
+              )
+            })}
+          </div>
         </div>
-
-        <button className="w-12 h-12 flex items-center justify-center border border-gray-500 rounded-lg text-gray-800 hover:bg-gray-300 transition-colors">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-          </svg>
-        </button>
-      </div>
-    </div>
+      </section>
       </>
     )
   }
