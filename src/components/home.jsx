@@ -1,10 +1,11 @@
 import NavBar from "./navBar"
 import Present from "./present"
 import Footer from "./footer"
-import Experience from "./experience"
+import Skills from "./skills"
 import { Button } from "./ui/button"
 import { Code} from "lucide-react"
-
+import Contact from "./contact"
+import Experience from "./experience"
 
 function Home() {
 
@@ -51,6 +52,8 @@ function Home() {
       </main>
       <Present />
       <Experience />
+      <Skills />
+      <Contact />
       <Footer />
        
   </div>

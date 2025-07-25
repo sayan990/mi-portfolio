@@ -1,78 +1,87 @@
-import {Card, CardHeader, CardTitle, CardContent} from './ui/card';
-import { Palette, Globe, Code } from "lucide-react"
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "./ui/card"
+import { Button } from "./ui/button"
+import { Github, ExternalLink } from "lucide-react"
 
 function Experience() {
 
-  const skills = [
-    { name: "HTML5", level: 85, icon: Globe },
-    { name: "JavaScript", level: 80, icon: Code },
-    { name: "React", level: 75, icon: Code },
-    { name: "Tailwind CSS", level: 90, icon: Palette },
-  ]
-
-  const projects = [
-    {
-      title: "E-commerce Landing Page",
-      description: "Página de aterrizaje responsive para tienda online con carrito de compras básico.",
-      tech: ["HTML", "JavaScript", "Tailwind CSS"],
-      image: "/placeholder.svg?height=200&width=300",
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "Todo App React",
-      description: "Aplicación de tareas con funcionalidades CRUD y almacenamiento local.",
-      tech: ["React", "JavaScript", "Tailwind CSS"],
-      image: "/placeholder.svg?height=200&width=300",
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "Portfolio Personal",
-      description: "Sitio web personal responsive con diseño moderno y animaciones.",
-      tech: ["React", "Tailwind CSS", "JavaScript"],
-      image: "/placeholder.svg?height=200&width=300",
-      github: "#",
-      demo: "#",
-    },
-  ]
-
+    const projects = [
+        {
+          title: "E-commerce Landing Page",
+          description: "Página de aterrizaje responsive para tienda online con carrito de compras básico.",
+          tech: ["HTML", "JavaScript", "Tailwind CSS"],
+          image: "/placeholder.svg?height=200&width=300",
+          github: "#",
+          demo: "#",
+        },
+        {
+          title: "Todo App React",
+          description: "Aplicación de tareas con funcionalidades CRUD y almacenamiento local.",
+          tech: ["React", "JavaScript", "Tailwind CSS"],
+          image: "/placeholder.svg?height=200&width=300",
+          github: "#",
+          demo: "#",
+        },
+        {
+          title: "Portfolio Personal",
+          description: "Sitio web personal responsive con diseño moderno y animaciones.",
+          tech: ["React", "Tailwind CSS", "JavaScript"],
+          image: "/placeholder.svg?height=200&width=300",
+          github: "#",
+          demo: "#",
+        },
+      ]
     return (
-      <>
-       <section id="habilidades" className="py-16 px-4 sm:px-6 lg:px-8">
+        <section id="proyectos" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Habilidades Técnicas</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Mis Proyectos</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {skills.map((skill, index) => {
-              const Icon = skill.icon
-              return (
-                <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <div className="w-16 h-16 mx-auto bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-4">
-                      <Icon className="w-8 h-8 text-white" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow">
+                <div className="relative">
+                  <img
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+                    <div className="flex space-x-2">
+                      <Button size="sm" variant="secondary">
+                        <Github className="w-4 h-4 mr-1" />
+                        Código
+                      </Button>
+                      <Button size="sm" variant="secondary">
+                        <ExternalLink className="w-4 h-4 mr-1" />
+                        Demo
+                      </Button>
                     </div>
-                    <CardTitle className="text-xl">{skill.name}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="w-full bg-slate-200 rounded-full h-2 mb-2">
-                      <div
-                        className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-1000"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                    <p className="text-sm text-slate-600">{skill.level}% de dominio</p>
-                  </CardContent>
-                </Card>
-              )
-            })}
+                  </div>
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-xl">{project.title}</CardTitle>
+                  <CardDescription>{project.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 text-sm rounded-full"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
-      </>
     )
   }
   
   export default Experience
+  

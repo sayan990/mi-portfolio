@@ -15,7 +15,7 @@ function Present() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="/placeholder.svg?height=400&width=400"
+                src="../public/profile.png"
                 alt="Foto de perfil"
                 className="w-full max-w-md mx-auto rounded-2xl shadow-2xl"
               />
