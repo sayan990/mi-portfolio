@@ -41,7 +41,7 @@ function Home() {
                   Ver mis proyectos
                 </Button>
               </a>
-              <a href="../public/Maximiliano-Caceres-dev.pdf" download target="_blank">
+              <a href="/Maximiliano-Caceres-dev.pdf" download target="_blank">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
