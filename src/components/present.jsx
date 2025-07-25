@@ -35,14 +35,18 @@ function Present() {
                 mis habilidades.
               </p>
               <div className="flex space-x-4">
+                <a href="https://github.com/sayan990" target="_blank">
                 <Button variant="outline" size="sm">
                   <Github className="w-4 h-4 mr-2" />
                   GitHub
                 </Button>
+                </a>
+                <a href="https://www.linkedin.com/in/maximiliano-caceres-dev/" target="_blank">
                 <Button variant="outline" size="sm">
                   <Linkedin className="w-4 h-4 mr-2" />
                   LinkedIn
                 </Button>
+                </a>
               </div>
             </div>
           </div>

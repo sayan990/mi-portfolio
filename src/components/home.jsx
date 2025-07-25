@@ -33,18 +33,22 @@ function Home() {
               Desarrollador Frontend Junior especializado en crear experiencias web modernas y responsivas
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
-              >
-                Ver mis proyectos
-              </Button>
+              <a href="#proyectos">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
+                >
+                  Ver mis proyectos
+                </Button>
+              </a>
+              <a href="../public/Maximiliano-Caceres-dev.pdf" download target="_blank">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
               >
                 Descargar CV
               </Button>
+              </a>
             </div>
           </div>
         </div>
