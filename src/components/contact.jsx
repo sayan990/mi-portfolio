@@ -1,5 +1,7 @@
 import { Button } from "./ui/button"
-import { Mail, Linkedin } from "lucide-react"
+import { Mail} from "lucide-react"
+
+
 
 function Contact() {
     return (
@@ -12,7 +14,7 @@ function Contact() {
           </p>
           {/* Formulario de contacto */}
           <form
-            action="https://formspree.io/f/xanbodyq"  // <-- Cambia esto por tu endpoint de Formspree
+              action={import.meta.env.VITE_FORMSPREE_ENDPOINT}
             method="POST"
             className="max-w-xl mx-auto text-left bg-white p-8 rounded-lg shadow-md"
           >
