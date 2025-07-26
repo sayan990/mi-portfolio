@@ -16,10 +16,10 @@ function Experience() {
         {
           title: "Todo App React",
           description: "Aplicación de tareas con funcionalidades CRUD y almacenamiento local.",
-          tech: ["React", "JavaScript", "Tailwind CSS"],
-          image: "/placeholder.svg?height=200&width=300",
-          github: "#",
-          demo: "#",
+          tech: ["React", "Typescript", "Tailwind CSS"],
+          image: "/todoApp.png",
+          github: "https://github.com/sayan990/TodoApp.git",
+          demo: "https://todo-app-xi-lemon-19.vercel.app/",
         },
         {
           title: "Portfolio Personal",
@@ -48,14 +48,18 @@ function Experience() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
                     <div className="flex space-x-2">
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
                       <Button size="sm" variant="secondary">
                         <Github className="w-4 h-4 mr-1" />
                         Código
                       </Button>
+                      </a>
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
                       <Button size="sm" variant="secondary">
                         <ExternalLink className="w-4 h-4 mr-1" />
                         Demo
                       </Button>
+                      </a>
                     </div>
                   </div>
                 </div>
