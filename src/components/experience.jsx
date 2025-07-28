@@ -6,28 +6,28 @@ function Experience() {
 
     const projects = [
         {
-          title: "E-commerce Landing Page",
-          description: "Página de aterrizaje responsive para tienda online con carrito de compras básico.",
+          title: "Cafe Glaciar",
+          description: "Página demo sobre una cafeteria.",
           tech: ["HTML", "JavaScript", "Tailwind CSS"],
-          image: "/placeholder.svg?height=200&width=300",
-          github: "#",
-          demo: "#",
+          image: "/cafeGlaciar.png",
+          github: "https://github.com/sayan990/glaciarCafeDemo",
+          demo: "https://glaciar-cafe-demo.vercel.app/",
         },
         {
           title: "Todo App React",
           description: "Aplicación de tareas con funcionalidades CRUD y almacenamiento local.",
-          tech: ["React", "Typescript", "Tailwind CSS"],
+          tech: ["React", "Typescript", "Tailwind CSS, JavaScript"],
           image: "/todoApp.png",
           github: "https://github.com/sayan990/TodoApp.git",
           demo: "https://todo-app-xi-lemon-19.vercel.app/",
         },
         {
           title: "Portfolio Personal",
-          description: "Sitio web personal responsive con diseño moderno y animaciones.",
+          description: "Sitio web personal responsive con diseño moderno.",
           tech: ["React", "Tailwind CSS", "JavaScript"],
-          image: "/placeholder.svg?height=200&width=300",
-          github: "#",
-          demo: "#",
+          image: "/portfolio.png",
+          github: "https://github.com/sayan990/mi-portfolio",
+          demo: "https://maxi-portfolio-nu.vercel.app/",
         },
       ]
     return (
