@@ -11,3 +11,49 @@ body {
 }
 
 
+/* Variables de tema por CSS custom properties (afecta utilidades Tailwind predefinidas) */
+:root {
+  --bg-root: #f8fafc; /* slate-50 */
+  --text-root: #0f172a; /* slate-900 */
+  --card-bg: #ffffff;
+  --card-fg: #0f172a;
+  --border: #e5e7eb;
+  --muted-fg: #475569; /* slate-600 */
+}
+
+.dark {
+  --bg-root: #0b1220; /* near-slate-950 */
+  --text-root: #e5e7eb; /* slate-200 */
+  --card-bg: #0f172a; /* slate-900 */
+  --card-fg: #e5e7eb;
+  --border: #1f2937; /* gray-800 */
+  --muted-fg: #9ca3af; /* gray-400 */
+}
+
+/* Aplicación general */
+html, body, #root {
+  background: var(--bg-root);
+  color: var(--text-root);
+}
+
+/* Ajustes suaves para secciones con fondos claros actuales */
+.dark .bg-white { background-color: var(--card-bg) !important; }
+.dark .from-slate-50 { --tw-gradient-from: #0b1220 var(--tw-gradient-from-position); --tw-gradient-to: rgb(11 18 32 / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+.dark .to-slate-100 { --tw-gradient-to: #0f172a var(--tw-gradient-to-position); }
+
+/* Tarjetas y bordes de los componentes UI */
+[data-slot="card"] { background-color: var(--card-bg); color: var(--card-fg); border-color: var(--border); }
+[data-slot="card-description"] { color: var(--muted-fg); }
+
+/* Navbar fondo translucido en dark */
+.dark nav { background-color: rgba(31, 41, 55, 0.7) !important; border-color: var(--border); }
+.dark .text-slate-800 { color: #e5e7eb !important; }
+.dark .text-slate-600 { color: var(--muted-fg) !important; }
+.dark .border-slate-200 { border-color: var(--border) !important; }
+
+/* Botones gradientes mantienen contraste */
+.dark .bg-gradient-to-r.from-blue-500.to-purple-600 { filter: brightness(0.9) saturate(1.1); }
+
+/* Chips de tecnologías en cards */
+.dark .from-blue-100.to-purple-100 { background-image: linear-gradient(to right, rgba(59,130,246,0.15), rgba(168,85,247,0.15)); color: #c7d2fe; }
+

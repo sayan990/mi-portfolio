@@ -37,7 +37,7 @@ function Experience() {
           tech: ["HTML", "JavaScript", "Tailwind CSS", "TypeScript"],
           image: "/snakerStore.png",
           github: "https://github.com/sayan990/snakerStore",
-          demo: "zapasecommer.vercel.app",
+          demo: "https://zapasecommer.vercel.app",
         }
       ]
 
