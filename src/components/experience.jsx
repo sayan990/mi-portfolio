@@ -1,3 +1,4 @@
+// Edición: Marcar textos con data-i18n (multi-idioma)
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "./ui/card"
 import { Button } from "./ui/button"
 import { Github, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react"
@@ -57,7 +58,7 @@ function Experience() {
         <section id="proyectos" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Mis Proyectos</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4" data-i18n="projects.titulo">Mis Proyectos</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
           </div>
           
@@ -92,13 +93,13 @@ function Experience() {
                       <a href={projects[currentProject].github} target="_blank" rel="noopener noreferrer">
                       <Button size="sm" variant="secondary">
                         <Github className="w-4 h-4 mr-1" />
-                        Código
+                        <span data-i18n="projects.btn.codigo">Código</span>
                       </Button>
                       </a>
                       <a href={projects[currentProject].demo} target="_blank" rel="noopener noreferrer">
                       <Button size="sm" variant="secondary">
                         <ExternalLink className="w-4 h-4 mr-1" />
-                        Demo
+                        <span data-i18n="projects.btn.demo">Demo</span>
                       </Button>
                       </a>
                     </div>

@@ -1,3 +1,4 @@
+// Edición: Marcar textos con data-i18n (multi-idioma)
 import { Github, Linkedin,} from "lucide-react"
 import { Button } from "./ui/button"
 
@@ -9,7 +10,7 @@ function Present() {
       <section id="sobre-mi" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Sobre mí</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4" data-i18n="about.titulo">Sobre mí</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
           </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -21,15 +22,15 @@ function Present() {
               />
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-slate-800 mb-4">
+              <h3 className="text-2xl font-semibold text-slate-800 mb-4" data-i18n="about.h3">
                 Desarrollador Frontend apasionado por la tecnología
               </h3>
-              <p className="text-slate-600 mb-6 leading-relaxed">
+              <p className="text-slate-600 mb-6 leading-relaxed" data-i18n="about.p1">
                 Soy un desarrollador junior con sólidos conocimientos en tecnologías frontend modernas. Me especializo
                 en crear interfaces de usuario intuitivas y responsivas utilizando HTML5, JavaScript, React y Tailwind
                 CSS.
               </p>
-              <p className="text-slate-600 mb-6 leading-relaxed">
+              <p className="text-slate-600 mb-6 leading-relaxed" data-i18n="about.p2">
                 Mi objetivo es seguir creciendo profesionalmente mientras contribuyo a proyectos innovadores que generen
                 un impacto positivo. Me encanta aprender nuevas tecnologías y enfrentar desafíos que me permitan mejorar
                 mis habilidades.

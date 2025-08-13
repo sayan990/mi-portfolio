@@ -1,3 +1,4 @@
+// Edición: Marcar textos con data-i18n (multi-idioma)
 import NavBar from "./navBar"
 import Present from "./present"
 import Footer from "./footer"
@@ -24,12 +25,12 @@ function Home() {
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6">
-              Hola, soy{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
+              <span data-i18n="hero.hola_soy">Hola, soy</span>{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600" data-i18n="hero.nombre_titulo">
                 Maxi Desarrollador
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto" data-i18n="hero.subtitulo">
               Desarrollador Frontend Junior especializado en crear experiencias web modernas y responsivas
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -38,7 +39,7 @@ function Home() {
                   size="lg"
                   className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
                 >
-                  Ver mis proyectos
+                  <span data-i18n="hero.btn.proyectos">Ver mis proyectos</span>
                 </Button>
               </a>
               <a href="/Maximiliano-Caceres-dev.pdf" download target="_blank">
@@ -46,7 +47,7 @@ function Home() {
                 size="lg"
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
               >
-                Descargar CV
+                <span data-i18n="hero.btn.cv">Descargar CV</span>
               </Button>
               </a>
             </div>

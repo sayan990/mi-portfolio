@@ -19,6 +19,109 @@
         } catch (_) {}
       })();
     </script>
+    <script>
+      // Edición: Sistema de traducción ENG/ESP con data-i18n
+      (function() {
+        var DICT = {
+          es: {
+            'nav.inicio': 'Inicio',
+            'nav.sobre_mi': 'Sobre mí',
+            'nav.habilidades': 'Habilidades',
+            'nav.proyectos': 'Proyectos',
+            'nav.contacto': 'Contacto',
+
+            'hero.hola_soy': 'Hola, soy',
+            'hero.nombre_titulo': 'Maxi Desarrollador',
+            'hero.subtitulo': 'Desarrollador Frontend Junior especializado en crear experiencias web modernas y responsivas',
+            'hero.btn.proyectos': 'Ver mis proyectos',
+            'hero.btn.cv': 'Descargar CV',
+
+            'about.titulo': 'Sobre mí',
+            'about.h3': 'Desarrollador Frontend apasionado por la tecnología',
+            'about.p1': 'Soy un desarrollador junior con sólidos conocimientos en tecnologías frontend modernas. Me especializo en crear interfaces de usuario intuitivas y responsivas utilizando HTML5, JavaScript, React y Tailwind CSS.',
+            'about.p2': 'Mi objetivo es seguir creciendo profesionalmente mientras contribuyo a proyectos innovadores que generen un impacto positivo. Me encanta aprender nuevas tecnologías y enfrentar desafíos que me permitan mejorar mis habilidades.',
+            'about.alt': 'Foto de perfil',
+
+            'projects.titulo': 'Mis Proyectos',
+            'projects.btn.codigo': 'Código',
+            'projects.btn.demo': 'Demo',
+
+            'skills.titulo': 'Habilidades Técnicas',
+            'skills.level_suffix': '% de dominio',
+
+            'contact.titulo': '¿Trabajamos juntos?',
+            'contact.desc': 'Estoy disponible para nuevas oportunidades y proyectos interesantes',
+            'contact.label.nombre': 'Nombre',
+            'contact.label.email': 'Email',
+            'contact.label.mensaje': 'Mensaje',
+            'contact.btn.enviar': 'Enviar mensaje',
+
+            'footer.texto': '© 2024 Maxi Desarrollador. Diseñado y desarrollado con ❤️ usando React y Tailwind CSS'
+          },
+          en: {
+            'nav.inicio': 'Home',
+            'nav.sobre_mi': 'About',
+            'nav.habilidades': 'Skills',
+            'nav.proyectos': 'Projects',
+            'nav.contacto': 'Contact',
+
+            'hero.hola_soy': 'Hi, I am',
+            'hero.nombre_titulo': 'Maxi Developer',
+            'hero.subtitulo': 'Junior Frontend Developer specialized in building modern, responsive web experiences',
+            'hero.btn.proyectos': 'View my projects',
+            'hero.btn.cv': 'Download CV',
+
+            'about.titulo': 'About me',
+            'about.h3': 'Frontend Developer passionate about technology',
+            'about.p1': 'I am a junior developer with solid knowledge in modern frontend technologies. I focus on creating intuitive, responsive user interfaces using HTML5, JavaScript, React, and Tailwind CSS.',
+            'about.p2': 'My goal is to keep growing professionally while contributing to innovative projects that make a positive impact. I love learning new technologies and tackling challenges that improve my skills.',
+            'about.alt': 'Profile photo',
+
+            'projects.titulo': 'My Projects',
+            'projects.btn.codigo': 'Code',
+            'projects.btn.demo': 'Live',
+
+            'skills.titulo': 'Technical Skills',
+            'skills.level_suffix': '% proficiency',
+
+            'contact.titulo': "Shall we work together?",
+            'contact.desc': 'I am available for new opportunities and interesting projects',
+            'contact.label.nombre': 'Name',
+            'contact.label.email': 'Email',
+            'contact.label.mensaje': 'Message',
+            'contact.btn.enviar': 'Send message',
+
+            'footer.texto': '© 2024 Maxi Developer. Designed and built with ❤️ using React and Tailwind CSS'
+          }
+        };
+
+        function getLang() {
+          try { return localStorage.getItem('lang') || 'es'; } catch (_) { return 'es'; }
+        }
+
+        function applyTranslations() {
+          var lang = (document.documentElement.getAttribute('data-lang') || getLang());
+          var dict = DICT[lang] || DICT.es;
+          document.querySelectorAll('[data-i18n]').forEach(function(el){
+            var key = el.getAttribute('data-i18n');
+            if (dict[key] != null) { el.textContent = dict[key]; }
+          });
+          document.querySelectorAll('[data-i18n-html]').forEach(function(el){
+            var key = el.getAttribute('data-i18n-html');
+            if (dict[key] != null) { el.innerHTML = dict[key]; }
+          });
+        }
+
+        function initLang() {
+          var stored = getLang();
+          document.documentElement.setAttribute('data-lang', stored);
+          applyTranslations();
+        }
+
+        window.addEventListener('DOMContentLoaded', initLang);
+        window.addEventListener('languagechange', applyTranslations);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
